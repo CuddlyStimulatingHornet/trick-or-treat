@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trick Or Treat</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start">
+        <form class="start__form" id="start-form">
+          <div class="start__field">
+            <label for="input-player" class="start__input-title"
+              >Введите имя игрока</label
+            >
+            <input type="text" id="input-player" class="start__input" />
+          </div>
+          <button type="button" id="add-player-btn">Добавить</button>
+        </form>
+        <div class="start__players players">
+          <ul class="players__list" id="players-list">
+            <li class="players__item">
+              <div class="players__avatar"></div>
+              <p class="players__name">Игрок</p>
+              <button class="players__delete-player">X</button>
+            </li>
+          </ul>
+          <button class="start__game">Начать Игру</button>
+        </div>
+      </div>
+      <div class="game">
+        <h2 class="game__round"></h2>
+        <div class="game__wheel"></div>
+        <div class="game__players players">
+          <ul class="players__list">
+            <li class="players__item">
+              <div class="players__avatar"></div>
+              <p class="players__name"></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
