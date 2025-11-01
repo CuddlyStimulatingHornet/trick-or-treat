@@ -3,35 +3,26 @@
 :root {
   --color-light: #ffffff;
 
-  --color-dark: #141414;
-  --color-dark-10: #1a1a1a;
-  --color-dark-15: #262626;
-  --color-dark-20: #333333;
-  --color-dark-40: #666666;
+  --color-bg: radial-gradient(
+    circle,
+    rgba(235, 237, 255, 1) 0%,
+    rgba(102, 5, 83, 1) 100%
+  );
 
-  --color-gray-50: #7e7e81;
-  --color-gray-60: #98989a;
-
-  --color-accent: #ffd11a;
+  --color-accent: rgba(102, 5, 83, 1);
+  --color-accent-alt: rgb(168, 81, 150);
   --color-red: #ff5500;
 
   --gradient: linear-gradient(
     45deg,
-    var(--color-dark-15) 64%,
+    var(--color-dar1k-15) 64%,
     var(--color-accent) 136%
   );
 
-  --border: #{rem(1)} solid var(--color-dark-15);
+  --border: #{rem(3)} solid var(--color-light);
+  --border-radius: #{rem(30)};
 
-  --font-family-base: "Inter", sans-serif;
-  --font-family-accent: "Kumbh Sans", sans-serif;
-
-  --container-width: #{rem(1600)};
-  --container-padding-x: #{rem(16)};
+  --font-family-base: "Raleway", sans-serif;
 
   --transition-duration: 0.2s;
-
-  @include laptop {
-    --container-width: #{rem(1280)};
-  }
 }

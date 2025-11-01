@@ -1,0 +1,83 @@
+@use "../helpers" as *;
+
+.game {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: rem(24);
+  width: 100%;
+  max-width: rem(800);
+  /*min-height: 365px;*/
+  min-height: rem(700);
+  padding: 24px;
+  background-color: var(--color-light);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  transition-duration: var(--transition-duration);
+
+  &__current-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+  }
+
+  &__title {
+    text-align: center;
+    color: var(--color-accent);
+  }
+
+  &__field {
+    display: grid;
+    row-gap: rem(20);
+    padding: rem(40);
+    border: rem(3) solid var(--color-accent);
+    border-radius: rem(50);
+  }
+
+  &__treat {
+    text-align: center;
+  }
+
+  &__task-text {
+    font-size: rem(30);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__next-btn {
+    height: rem(80);
+    padding: rem(10) rem(50);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: rem(25);
+    color: var(--color-light);
+    font-weight: 600;
+    font-size: rem(40);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.treat-win {
+  width: rem(600);
+  height: rem(200);
+  background-image: url("../../images/treat.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

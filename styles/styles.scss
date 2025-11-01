@@ -3,3 +3,8 @@
 @use "variables";
 @use "utils";
 @use "globals";
+
+@use "blocks/start";
+@use "blocks/players";
+@use "blocks/current-player";
+@use "blocks/game";

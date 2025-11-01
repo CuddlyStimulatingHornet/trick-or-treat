@@ -1,0 +1,57 @@
+@use "../helpers" as *;
+
+.players {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: rem(20);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: rem(20);
+    max-height: rem(450);
+    overflow-y: auto;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(10);
+    background-color: var(--color-light);
+    padding: rem(20) rem(10);
+    border-radius: rem(15);
+    border: rem(3) solid var(--color-accent-alt);
+  }
+
+  &__avatar {
+    @include square(rem(70));
+
+    border-radius: rem(20);
+    background-image: url("../../images/avatars/1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__name {
+    color: var(--color-accent);
+    font-size: rem(20);
+    font-weight: 400;
+  }
+
+  &__delete-player {
+    @include square(rem(35));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    border-radius: rem(50);
+    border: none;
+  }
+}

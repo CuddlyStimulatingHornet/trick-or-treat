@@ -10,11 +10,13 @@ body {
   @include fluid-text(18, 14);
 
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  padding: rem(50) rem(20);
   font-family: var(--font-family-base);
-  letter-spacing: -0.03em;
-  color: var(--color-gray-50);
-  background-color: var(--color-dark);
+  color: var(--color-accent);
+  background: var(--color-bg);
 }
 
 main {
@@ -33,7 +35,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  color: var(--color-light);
+  color: var(--color-accent);
 }
 
 h1,
@@ -42,8 +44,8 @@ h2,
 .h2,
 h3,
 .h3 {
-  font-family: var(--font-family-accent);
-  font-weight: 500;
+  font-family: var(--font-family-base);
+  font-weight: 900;
 }
 
 h4,
@@ -110,8 +112,7 @@ a {
 }
 
 :focus-visible {
-  outline: rem(2) dashed var(--color-light);
-  outline-offset: rem(4);
+  outline: rem(2) solid var(--color-accent);
   transition-duration: 0s !important;
 }
 
@@ -127,4 +128,11 @@ button {
       content: "";
     }
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
 }

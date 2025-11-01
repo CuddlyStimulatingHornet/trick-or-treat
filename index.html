@@ -9,38 +9,43 @@
   </head>
   <body>
     <div class="container">
-      <div class="start">
+      <div class="start" id="start-screen">
         <form class="start__form" id="start-form">
+          <label for="input-player" class="start__input-title"
+            >Введите имя игрока</label
+          >
           <div class="start__field">
-            <label for="input-player" class="start__input-title"
-              >Введите имя игрока</label
-            >
             <input type="text" id="input-player" class="start__input" />
+            <button class="start__add-btn" type="submit" id="add-player-btn">
+              Добавить
+            </button>
           </div>
-          <button type="button" id="add-player-btn">Добавить</button>
         </form>
         <div class="start__players players">
-          <ul class="players__list" id="players-list">
-            <li class="players__item">
-              <div class="players__avatar"></div>
-              <p class="players__name">Игрок</p>
-              <button class="players__delete-player">X</button>
-            </li>
-          </ul>
-          <button class="start__game">Начать Игру</button>
+          <ul class="players__list" id="players-list"></ul>
+          <button class="start__start-btn" id="start-button">
+            Начать Игру
+          </button>
         </div>
       </div>
-      <div class="game">
-        <h2 class="game__round"></h2>
-        <div class="game__wheel"></div>
-        <div class="game__players players">
-          <ul class="players__list">
-            <li class="players__item">
-              <div class="players__avatar"></div>
-              <p class="players__name"></p>
-            </li>
-          </ul>
+      <div class="game visually-hidden" id="game-screen">
+        <h2 class="game__title">Игра!</h2>
+        <div class="game__current-card" id="current-card">
+          <div class="current-player animate-fade-in" id="current-player">
+            <div
+              class="current-player__avatar"
+              id="current-player-avatar"
+            ></div>
+            <p class="current-player__name" id="current-player-name"></p>
+          </div>
+          <div class="game__field animate-fade-in" id="game-field">
+            <h2 class="game__treat" id="game-treat"></h2>
+            <div class="task" id="game-task"></div>
+          </div>
         </div>
+        <button class="game__next-btn" type="button" id="game-next-btn">
+          Дальше
+        </button>
       </div>
     </div>
   </body>

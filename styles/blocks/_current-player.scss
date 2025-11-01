@@ -1,0 +1,24 @@
+@use "../helpers" as *;
+
+.current-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: rem(20);
+
+  &__avatar {
+    @include square(rem(100));
+
+    border-radius: rem(20);
+    background-image: url("../../images/avatars/1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__name {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: rem(50);
+  }
+}
